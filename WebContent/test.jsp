@@ -6,8 +6,22 @@
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>리모콘</title>
 <link rel="stylesheet" type="text/css" href="remocon.css">
-<script src="/remocon.js"></script>
-<script src="jquery/jquery-ui-1.10.3.custom.min.js"></script>
+<script src="remocon.js"></script>
+<script src="jquery/jquery-3.2.1.js"></script>
+<script type="text/javascript" src="remocon.js"></script>
+<script type="text/javascript">
+
+/* $(function(){
+	$(".wing_btn_next").click(function(){
+		$("#wingRecentPrd_1").addClass('disable');
+		$("#wingRecentPrd_2").removeClass('disable');
+	})
+	
+})
+ */
+	
+
+</script>
 </head>
 <body>
 <div id = "windBanner" class = "wing_banner"> <!-- 리모콘 전제 -->
@@ -63,9 +77,9 @@
 			</ul>
 			<ul id = "wingRecentPrd_2" style="" class = "disable">			<!-- 2번리스트 그룹 -->
 				<li id = "2-1" class="wing_prd">						<!-- 2번그룹의 첫번째 상품 -->
-					<a href = "상품링크" target="_blank">					<!-- 해당상품의 상세페이지 주소 -->
+					<a href = "http://www.loveloveme.com/product/detail.html?product_no=23652&cate_no=1&display_group=12" target="_blank">					<!-- 해당상품의 상세페이지 주소 -->
 						<span class="wing_prd_img">
-							<img alt="" src="이미지 주소">
+							<img alt="" src="http://www.loveloveme.com/web/product/medium/201704/23652_shop1_560408.jpg">
 						</span>
 						<span class="wing_prd_info">					<!-- 상품의 정보 -->
 							<span class="p_name"> 상품 설명? 이름?</span>	<!-- 상품의 이름? -->

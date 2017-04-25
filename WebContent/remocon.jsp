@@ -100,7 +100,7 @@
 		</div>
 		<div>
 			<button class="pre_button"></button>  <!-- 이전 페이지 보여주기 -->
-			<button class="post_button"></button> <!-- 다음 페이지 보여주기 -->
+			<button class="next_button"></button> <!-- 다음 페이지 보여주기 -->
 		</div>
 		<div>
 			<a href="#"><img alt="페이지 상단으로 이동" src=""></a>  <!-- 페이지 상단으로 이동 -->
