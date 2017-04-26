@@ -1,0 +1,105 @@
+@CHARSET "UTF-8";
+
+
+body{
+	margin: 0% 10%;
+	height: 1000px;
+	border: solid 1px;
+}
+
+
+h1{
+	font-family: 맑은 고딕;
+	font-size:45px;
+	text-align: center;	
+}
+
+
+h1 img{
+	width: 35px;
+}
+
+
+#favoriteTb{
+	margin-left:auto;
+	margin-right:auto;
+	text-align: center;
+}
+
+
+#favoriteTb th:nth-child(1){
+	width: 60px;
+}
+
+
+#favoriteTb th:nth-child(2){
+	width: 110px;
+}
+
+
+#favoriteTb th:nth-child(3){
+	width: 380px;
+}
+
+
+#favoriteTb th:nth-child(4){
+	width: 480px;
+}
+
+
+#favoriteTb th:nth-child(5){
+	width: 110px;
+}
+
+
+#favoriteTb td{
+	height: 120px;
+}
+
+
+textarea{
+	width: 500px;
+	height:110px;
+	resize: none;
+}
+
+
+th{
+	border: solid 1px;
+	color: gray;
+	background-color: gray;
+}
+
+tr:HOVER{
+	background-color: #f2f2f2;
+}
+
+
+td{
+	border-bottom: solid 1px;
+	text-align: center;
+	font-family: 맑은 고딕;
+	font-size: 20px;
+}
+
+
+a{
+	text-decoration: none;
+	color: black;
+}
+
+
+section{
+	text-align: center;
+}
+
+
+#pageNo{
+	padding: 10px 17px;
+	background-image: url("../../images/favoriteImg/shirt3.png");
+	background-repeat: no-repeat;
+	background-position: center;	
+}
+
+
+

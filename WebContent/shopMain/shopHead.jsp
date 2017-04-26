@@ -4,12 +4,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="../resources/css/shopMain/shopHead.css" />
 <title>Insert title here</title>
 </head>
 <body>
-<jsp:include page="shopHead.jsp"/>
-<jsp:include page="shopBody.jsp"/>
-
-
+	<a href="#"><img id="loginimg" src="../resources/images/shopMainImg/036-avatar.png"></a>
+	<img id="logo" src="../resources/images/shopMainImg/shoppingmall.png" alt="쇼핑몰관리자 모드">
 </body>
 </html>
