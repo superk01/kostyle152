@@ -4,10 +4,42 @@
 
 
 
-<mapper namespace="kosta.mapper.BoardMapper">
+<mapper namespace="customer.mapper.C_BoardMapper">
 	<cache />
 	
-	<insert id="insertBoard" parameterType="board">
+	<select id="list" resultType="C_Board" parameterType="Search">
+		select * from question
+			<if test="area != null">
+				<where>
+					<!-- <foreach collection="area" item="area"> -->
+						${area} LIKE #{searchKey}
+				<!-- 	</foreach> -->
+				</where>
+			</if>
+	</select>
+	<insert id="insertBoard" parameterType="C_Board">
+		insert into question 
+		(q_num, q_title, q_content, q_date)
+		VALUES
+		(#{q_Num},#{q_Title},#{q_Content},sysdate)
+	</insert>
+	<select id="add" resultType="Integer">
+		select max(q_num) from question
+	</select>
+	<select id="detailBoard" resultType="C_Board" parameterType="int">
+		select * from question where q_num = #{value}
+	</select>
+	<update id="updateBoard" parameterType="C_Board">
+		update question set 
+			q_title = #{q_Title},
+			q_content = #{q_Content}
+			where q_num = #{q_Num}
+	</update>
+	<delete id="deleteBoard">
+		delete from question where q_num = #{value}
+	
+	</delete>
+	<!-- <insert id="insertBoard" parameterType="board">
 		insert into board3 (b_id, b_name, b_title, b_content, b_pwd, b_date, b_hit)
 		values(#{b_id},#{b_name},#{b_title},#{b_content},#{b_pwd},sysdate,0)
 	</insert>
@@ -59,6 +91,6 @@
 	</insert>
 	<select id="replyList" parameterType="int" resultType="reply">
 		select * from reply where b_id = #{value}
-	</select>
+	</select> -->
 </mapper>
 

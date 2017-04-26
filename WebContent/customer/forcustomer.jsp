@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>   
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -14,30 +17,37 @@
 		<thead>
 			<tr>
 				<th>게시글 번호</th>
-				<th>답변 여부</th>
+				<!-- <th>답변 여부</th> -->
 				<th>대상 쇼핑몰</th>
 				<th>제목</th>
 				<th>작성자</th>
 				<th>작성일</th>
 			</tr>
 		</thead>
-		<!-- 게시판 출력  foreach필요-->
+		<c:forEach var="board" items="${list }">
 		<tbody>
 			<tr>
-				<td>게시글 번호</td>
-				<td>답변 여부</td>
-				<td>대상 쇼핑몰</td>
-				<td>제목</td>
-				<td>작성자</td>
-				<td>작성일</td>
+				<td>${board.q_Num }</td>
+				<!-- <td>답변 여부</td> -->
+				<td>${board.s_Name }</td>
+				<td><a href = "detail.a?q_num=${board.q_Num }">${board.q_Title }</a></td>
+				<td>${board.c_Id }</td>
+				<td>${board.q_Date }</td>
 			</tr>
 		</tbody>
+		</c:forEach>
 	</table>
 	
-	<form action="" method="post">
+	<form action="listAction.a" method="post">
 		 <input type="hidden" name="temp" value="temp"></input>
-		 <input type="checkbox" name="area" value="b_title">제목</input>
-		 <input type="checkbox" name="area" value="b_name">작성자</input>
+		 
+						<select id="searchCat" name = "area">
+							<option value="q_title">제목</option>
+							<option value="q_name">작성자</option>
+						</select>
+					
+		 <!-- <input type="checkbox" name="area" value="q_title">제목</input>
+		 <input type="checkbox" name="area" value="q_name">작성자</input> -->
 		 <input type="text" name="searchKey" size="10"></input>
 		 <input type="submit" value="검색">
 	</form>

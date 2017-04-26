@@ -1,14 +1,15 @@
-package model;
+package customer.model;
 
+import java.io.Serializable;
 import java.sql.Date;
 
-public class C_Board {
+public class C_Board implements Serializable{
 	private int q_Num;
 	private String q_Title;
 	private String q_Content;
 	private Date q_Date;
-	private int c_Num;
-	private int s_Num;
+	private String c_Id;
+	private String s_Name;
 	
 	public C_Board(){}
 
@@ -46,25 +47,25 @@ public class C_Board {
 		this.q_Date = q_Date;
 	}
 
-	public int getC_Num() {
-		return c_Num;
+	public String getC_Id() {
+		return c_Id;
 	}
 
-	public void setC_Num(int c_Num) {
-		this.c_Num = c_Num;
+	public void setC_Id(String c_Id) {
+		this.c_Id = c_Id;
 	}
 
-	public int getS_Num() {
-		return s_Num;
+	public String getS_Name() {
+		return s_Name;
 	}
 
-	public void setS_Num(int s_Num) {
-		this.s_Num = s_Num;
+	public void setS_Name(String s_Name) {
+		this.s_Name = s_Name;
 	}
 	@Override
 	public String toString() {
 		return "C_Board [q_Num=" + q_Num + ", q_Title=" + q_Title + ", q_Content=" + q_Content + ", q_Date=" + q_Date
-				+ ", c_Num=" + c_Num + ", s_Num=" + s_Num + "]";
+				+ ", c_Id=" + c_Id + ", s_Name=" + s_Name + "]";
 	}
 	
 	

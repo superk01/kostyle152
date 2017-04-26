@@ -9,7 +9,7 @@
 </head>
 <body>
 
-	<form action="">
+	<form action="insertAction.a" method = "post">
 		<table border="1px solid">
 			<tr>
 				<td id = "category">쇼핑몰 선택</td>
@@ -51,11 +51,12 @@
 			<tr>
 				<td colspan="4" align="center">
 				<input type="submit" value="제  출">
-				<input type="reset" value="내용삭제"> 
+				<input type="reset" value="내용삭제">
+				 
 				</td>
 			</tr>
 		</table>	
-
+		<a href = "listAction.a"><button>목록보기</button></a>
 
 	</form>
 
