@@ -22,7 +22,7 @@ public class C_BoardDAO {
 		}
 		return dao;
 	}
-	
+	//세션팩토리
 	public SqlSessionFactory getFactory() {
 		String resource="mybatis-config.xml";
 		InputStream is=null;
@@ -32,6 +32,7 @@ public class C_BoardDAO {
 			e.printStackTrace();
 		}return new SqlSessionFactoryBuilder().build(is);
 	}
+	//리스트
 	public List<C_Board> list(Search search){
 		List<C_Board> list=null;
 		SqlSession session = getFactory().openSession();
@@ -44,26 +45,30 @@ public class C_BoardDAO {
 			session.close();
 		}return list;
 	}
-	public void addQ_Num(C_Board board){
+	//q_Num의 최대값 구하기
+	public int addQ_Num(){
 		SqlSession session = getFactory().openSession();
-		int num = -1;
+		
 		try {
-		num = session.getMapper(C_BoardMapper.class).add(board);
-			if(num!=-1){
-				board.setQ_Num(num+1);
+			if(session.getMapper(C_BoardMapper.class).add()==null){
+				return 0;
+			}else{
+				return session.getMapper(C_BoardMapper.class).add();
 			}
-		} catch (Exception e) {
+		}catch (Exception e) {
 			e.printStackTrace();
+			return 0;
 		}finally {
 			session.close();
 		}
 		
 		
 	}
-	
+	//고객문의 게시판에 글 추가
 	public void insertBoard(C_Board board, int c_num) {
 		
-		addQ_Num(board);
+		int num = addQ_Num();
+		board.setQ_Num(num+1);
 		board.setC_Id(getC_Id(c_num));
 		System.out.println(board.getQ_Num());
 		SqlSession session = getFactory().openSession();
@@ -81,6 +86,7 @@ public class C_BoardDAO {
 			session.close();
 		}
 	}
+	//게시판 글 목록의 글의 제목을 클릭했을때 해당하는 글의 객체하나를 구함.
 	public C_Board detailBoard(int q_num) {
 		SqlSession session = getFactory().openSession();
 		C_Board board = null;
@@ -108,6 +114,7 @@ public class C_BoardDAO {
 		}
 		
 	}
+	//삭제
 	public void deleteBoard(int q_num) {
 		SqlSession session = getFactory().openSession();
 		int re =-1;
@@ -125,6 +132,7 @@ public class C_BoardDAO {
 		}
 		
 	}
+	//고객 고유의 번호를 가지고 고객의 id를 구함.
 	public String getC_Id(int c_num) {
 		SqlSession session= getFactory().openSession();
 		String c_Id = null;
@@ -135,11 +143,14 @@ public class C_BoardDAO {
 		}finally {
 			session.close();
 		}return c_Id;
-		
 	}
-	public void insertAnwer(Answer answer) {
+	//댓글 테이블에 글 추가.
+	public void insertAnswer(Answer answer) {
 		SqlSession session = getFactory().openSession();
-		int as_Num = addAs_Num();
+		int as_Num = addAs_Num()+1;
+		System.out.println("as_Num : "+as_Num);
+		answer.setAs_num(as_Num+"");
+		System.out.println("insertAnswer :"+answer);
 		int re = -1;
 		
 		try {
@@ -156,6 +167,7 @@ public class C_BoardDAO {
 		}
 		
 	}
+	//as_Num의 최대값을 구함
 	public int addAs_Num() {
 		SqlSession session = getFactory().openSession();
 		/*String re = null;*/

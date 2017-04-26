@@ -37,7 +37,6 @@
 	</update>
 	<delete id="deleteBoard">
 		delete from question where q_num = #{value}
-	
 	</delete>
 	
 	<select id="getC_Id" parameterType="int" resultType="String">
@@ -50,9 +49,9 @@
 	
 	<insert id="insertAnswer" parameterType="Answer">
 		insert into answer
-		(as_num, as_content, as_title, as_date, q_num)
-		values
-		(#{as_Num}, #{as_Content}, #{as_Title}, sysdate, #{q_Num})
+		(as_num,as_content,as_date,q_num)
+		VALUES
+		(#{as_Num},#{as_Content},sysdate,#{q_Num})
 	</insert>
 	<!-- <insert id="insertBoard" parameterType="board">
 		insert into board3 (b_id, b_name, b_title, b_content, b_pwd, b_date, b_hit)

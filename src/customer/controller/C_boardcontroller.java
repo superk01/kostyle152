@@ -99,17 +99,17 @@ public class C_boardcontroller extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	 doProcess(request, response);
 	 
-	 /*//»ç¿ëÀÚ°¡ ¿äÃ»ÇÑ ÁÖ¼Ò	
+	 /*//ï¿½ï¿½ï¿½ï¿½Ú°ï¿½ ï¿½ï¿½Ã»ï¿½ï¿½ ï¿½Ö¼ï¿½	
 	 String url = request.getRequestURL().toString();
 	 System.out.println(url);
-	 //DAO°´Ã¼»ý¼º
+	 //DAOï¿½ï¿½Ã¼ï¿½ï¿½ï¿½ï¿½
 	 C_BoardDAO dao = C_BoardDAO.getInstance();
-	 //list.doÀÌ¸é
+	 //list.doï¿½Ì¸ï¿½
 	 if(url.indexOf("list.do") !=-1){
-	 //°Ô½Ã¹° ¸ñ·Ï ¸®ÅÏ	 
+	 //ï¿½Ô½Ã¹ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½	 
 	 List<C_Board> list = dao.list();
 	 request.setAttribute("list", list);
-	 //´ÙÀ½ ÁÖ¼Ò·Î Æ÷¿öµù(ÁÖ¼Ò°íÁ¤, È­¸é ÀüÈ¯, µ¥ÀÌÅÍ Àü´Þ).
+	 //ï¿½ï¿½ï¿½ï¿½ ï¿½Ö¼Ò·ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(ï¿½Ö¼Ò°ï¿½ï¿½ï¿½, È­ï¿½ï¿½ ï¿½ï¿½È¯, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½).
 	 String page = "/customer/forcustomer.jsp";
 	 RequestDispatcher rd = request.getRequestDispatcher(page);
 	 rd.forward(request, response);

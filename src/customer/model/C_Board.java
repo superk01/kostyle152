@@ -1,7 +1,8 @@
 package customer.model;
 
 import java.io.Serializable;
-import java.sql.Date;
+import java.util.Date;
+
 
 public class C_Board implements Serializable{
 	private int q_Num;

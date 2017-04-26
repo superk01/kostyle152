@@ -28,9 +28,11 @@ public class DetailAction implements Action {
 		String as_writer = request.getParameter("as_writer");
 		Answer answer = new Answer();
 		
+		answer.setQ_Num(q_num);
 		answer.setAc_Content(as_content);
 		
-		dao.insertAnwer(answer);
+		dao.insertAnswer(answer);
+		System.out.println("answer:"+answer);
 		ActionForward forward =new ActionForward();
 		forward.setRedirect(false);
 		forward.setPath("detail.jsp");

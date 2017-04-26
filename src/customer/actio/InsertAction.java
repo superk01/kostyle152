@@ -14,7 +14,7 @@ public class InsertAction implements Action {
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		
-		//¼¼¼Ç¿¡¼­ ·Î±×ÀÎ Á¤º¸¸¦ ¹Þ¾Æ¼­ c_numÀ» insertBoard¸Þ¼ÒµåÀÇ ÆÄ¶ó¹ÌÅÍ°ªÀ¸·Î ³Ö¾î ÁÙ°Í
+		//ï¿½ï¿½ï¿½Ç¿ï¿½ï¿½ï¿½ ï¿½Î±ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Þ¾Æ¼ï¿½ c_numï¿½ï¿½ insertBoardï¿½Þ¼Òµï¿½ï¿½ï¿½ ï¿½Ä¶ï¿½ï¿½ï¿½Í°ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö¾ï¿½ ï¿½Ù°ï¿½
 		int c_num = 0;
 		
 		C_BoardDAO dao = C_BoardDAO.getInstance();

@@ -8,22 +8,22 @@ import customer.model.Search;
 
 public interface C_BoardMapper {
 
-	List<C_Board> list(Search search);
+	public List<C_Board> list(Search search);
 
-	int insertBoard(C_Board board);
+	public int insertBoard(C_Board board);
 
-	int add(C_Board board);
+	public Integer add();
 
-	C_Board detailBoard(int q_num);
+	public C_Board detailBoard(int q_num);
 
-	int updateBoard(C_Board board);
+	public int updateBoard(C_Board board);
 
-	int deleteBoard(int q_num);
+	public int deleteBoard(int q_num);
 
-	String getC_Id(int c_num);
+	public String getC_Id(int c_num);
 
-	Integer addAs_Num();
+	public Integer addAs_Num();
 
-	int insertAnswer(Answer answer);
+	public int insertAnswer(Answer answer);
 
 }
