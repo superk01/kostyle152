@@ -29,7 +29,7 @@ public class UpdateAction implements Action {
 		ActionForward forward = new ActionForward();
 		forward.setRedirect(true);
 		forward.setPath("listAction.a");
-		return null;
+		return forward;
 	}
 
 }
