@@ -58,7 +58,7 @@ public class C_boardcontroller extends HttpServlet {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-		}else if(command.equals("detail.a")){
+		}else if(command.equals("detailAction.a")){
 			action = new DetailAction();
 			try {
 				forward = action.execute(request, response);

@@ -14,6 +14,9 @@ public class InsertAction implements Action {
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		
+		//세션에서 로그인 정보를 받아서 c_num을 insertBoard메소드의 파라미터값으로 넣어 줄것
+		int c_num = 0;
+		
 		C_BoardDAO dao = C_BoardDAO.getInstance();
 		C_Board board = new C_Board();
 		String num =request.getParameter("q_num");
@@ -33,7 +36,7 @@ public class InsertAction implements Action {
 		board.setQ_Title(q_title);
 		board.setQ_Content(q_content);
 		
-		dao.insertBoard(board);
+		dao.insertBoard(board, c_num);
 		
 		ActionForward forward = new ActionForward();
 		forward.setRedirect(true);

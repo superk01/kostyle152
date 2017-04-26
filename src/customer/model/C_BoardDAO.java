@@ -61,8 +61,10 @@ public class C_BoardDAO {
 		
 	}
 	
-	public void insertBoard(C_Board board) {
+	public void insertBoard(C_Board board, int c_num) {
+		
 		addQ_Num(board);
+		board.setC_Id(getC_Id(c_num));
 		System.out.println(board.getQ_Num());
 		SqlSession session = getFactory().openSession();
 		int re = -1;
@@ -121,6 +123,56 @@ public class C_BoardDAO {
 		}finally {
 			session.close();
 		}
+		
+	}
+	public String getC_Id(int c_num) {
+		SqlSession session= getFactory().openSession();
+		String c_Id = null;
+		try {
+			c_Id = session.getMapper(C_BoardMapper.class).getC_Id(c_num);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			session.close();
+		}return c_Id;
+		
+	}
+	public void insertAnwer(Answer answer) {
+		SqlSession session = getFactory().openSession();
+		int as_Num = addAs_Num();
+		int re = -1;
+		
+		try {
+			re = session.getMapper(C_BoardMapper.class).insertAnswer(answer);
+			if(re>0){
+				session.commit();
+			}else{
+				session.rollback();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			session.close();
+		}
+		
+	}
+	public int addAs_Num() {
+		SqlSession session = getFactory().openSession();
+		/*String re = null;*/
+	
+		try {
+			if(session.getMapper(C_BoardMapper.class).addAs_Num()==null){
+				return 0;
+			}else{
+				return (session.getMapper(C_BoardMapper.class).addAs_Num());
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+			return 0;
+		} finally {
+			session.close();
+		}
+				
 		
 	}
 }

@@ -39,6 +39,21 @@
 		delete from question where q_num = #{value}
 	
 	</delete>
+	
+	<select id="getC_Id" parameterType="int" resultType="String">
+		select c_id from customer where c_num = #{value}
+	</select>
+	
+	<select id="addAs_Num" resultType="integer">
+		select max(as_num) from answer
+	</select>
+	
+	<insert id="insertAnswer" parameterType="Answer">
+		insert into answer
+		(as_num, as_content, as_title, as_date, q_num)
+		values
+		(#{as_Num}, #{as_Content}, #{as_Title}, sysdate, #{q_Num})
+	</insert>
 	<!-- <insert id="insertBoard" parameterType="board">
 		insert into board3 (b_id, b_name, b_title, b_content, b_pwd, b_date, b_hit)
 		values(#{b_id},#{b_name},#{b_title},#{b_content},#{b_pwd},sysdate,0)

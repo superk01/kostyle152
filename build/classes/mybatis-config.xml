@@ -5,9 +5,9 @@
 
 <configuration>
 	<typeAliases>
-		<typeAlias type="customer.model.C_Board"	 alias="C_Board"/>
+		<typeAlias type="customer.model.C_Board" alias="C_Board"/>
 		<typeAlias type="customer.model.Search" alias="Search"/>
-		<!-- <typeAlias type="customer.model.Reply" alias="C_Reply"/> -->
+		<typeAlias type="customer.model.Answer" alias="Answer"/>
 		
 	</typeAliases>
 	

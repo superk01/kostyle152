@@ -60,19 +60,19 @@ function fn_delete(){
 			</td>			
 		</tr>
 		
-		<%-- <c:forEach var="reply" items="${list }">
+		<c:forEach var="reply" items="${list }">
 		<tr height="30">
 			<td align="center">${reply.r_name }</td>
 			<td align="center">${reply.r_content }</td>
 		</tr>		
-		</c:forEach> --%>
+		</c:forEach>
 		
 		<tr height="30">
 			<td colspan="3">
-			<form action="" method="post">
-				<textarea rows="3" cols="70" name="r_content"></textarea>
+			<form action="detailAction.a" method="post">
+				<textarea rows="3" cols="70" name="as_content"></textarea>
 				<input type="hidden" name = "q_num" value="${board.q_Num }">
-				<input type="text" name = "r_name">
+				<input type="text" name = "as_writer">
 				<input type="submit" value="´ñ±Û´Þ±â" >
 				</form>
 				</td>

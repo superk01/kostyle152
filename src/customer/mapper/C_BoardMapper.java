@@ -2,6 +2,7 @@ package customer.mapper;
 
 import java.util.List;
 
+import customer.model.Answer;
 import customer.model.C_Board;
 import customer.model.Search;
 
@@ -18,5 +19,11 @@ public interface C_BoardMapper {
 	int updateBoard(C_Board board);
 
 	int deleteBoard(int q_num);
+
+	String getC_Id(int c_num);
+
+	Integer addAs_Num();
+
+	int insertAnswer(Answer answer);
 
 }

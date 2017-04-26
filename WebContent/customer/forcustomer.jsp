@@ -30,7 +30,7 @@
 				<td>${board.q_Num }</td>
 				<!-- <td>답변 여부</td> -->
 				<td>${board.s_Name }</td>
-				<td><a href = "detail.a?q_num=${board.q_Num }">${board.q_Title }</a></td>
+				<td><a href = "detailAction.a?q_num=${board.q_Num }">${board.q_Title }</a></td>
 				<td>${board.c_Id }</td>
 				<td>${board.q_Date }</td>
 			</tr>
