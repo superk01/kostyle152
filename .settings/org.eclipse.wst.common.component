@@ -1,40 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     <wb-module deploy-name="Kostyle">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
         <property name="java-output-path" value="/Kostyle/build/classes"/>
         <property name="context-root" value="Kostyle"/>
-=======
-    <wb-module deploy-name="kostylemall">
-        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
-        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
-        <property name="context-root" value="kostylemall"/>
-        <property name="java-output-path" value="/kostylemall/build/classes"/>
->>>>>>> 35188bd0764fcc7b320a92d2ddee3cf6435ea85c
-=======
-    <wb-module deploy-name="Kosta">
-        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
-        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
-        <property name="context-root" value="Kosta"/>
-        <property name="java-output-path" value="/Kosta/build/classes"/>
->>>>>>> 3a949a197645aa125de08e72cecfa02ed41b8e31
-=======
-    <wb-module deploy-name="Kostylemall">
-        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
-        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
-        <property name="context-root" value="Kostylemall"/>
-        <property name="java-output-path" value="/Kostylemall/build/classes"/>
->>>>>>> 62eeeb7de3131d04c7ac2df03cae7c54e3e4f9f9
-=======
-    <wb-module deploy-name="kostylemall">
-        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
-        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
-        <property name="java-output-path" value="/kostylemall/build/classes"/>
-        <property name="context-root" value="kostylemall"/>
->>>>>>> b1dfbe2292ba78a93a60eb3ee8638e93600c00a5
     </wb-module>
 </project-modules>
