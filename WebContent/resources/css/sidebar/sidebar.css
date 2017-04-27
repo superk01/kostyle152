@@ -1,0 +1,18 @@
+#sidebar{
+	border : 1px solid black;
+	bottom : 0px;
+	width : 10%;
+	height : 5%;
+	position: fixed;
+	overflow: hidden;
+	background: white;
+}
+
+#sidebarTitle{
+	display: block;
+}
+
+#sidebarContent{
+	display: none;
+}
+
