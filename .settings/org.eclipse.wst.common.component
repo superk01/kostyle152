@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <wb-module deploy-name="Kostyle">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
@@ -28,5 +29,12 @@
         <property name="context-root" value="Kostylemall"/>
         <property name="java-output-path" value="/Kostylemall/build/classes"/>
 >>>>>>> 62eeeb7de3131d04c7ac2df03cae7c54e3e4f9f9
+=======
+    <wb-module deploy-name="kostylemall">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <property name="java-output-path" value="/kostylemall/build/classes"/>
+        <property name="context-root" value="kostylemall"/>
+>>>>>>> b1dfbe2292ba78a93a60eb3ee8638e93600c00a5
     </wb-module>
 </project-modules>

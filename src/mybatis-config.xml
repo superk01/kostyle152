@@ -4,6 +4,7 @@
   "http://mybatis.org/dtd/mybatis-3-config.dtd">
 
 <configuration>
+<<<<<<< HEAD
 	<typeAliases>
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -50,3 +51,23 @@
 	</mappers>
 	
 </configuration>
+=======
+   <typeAliases>
+      <typeAlias type="favorite.model.Favorite" alias="Favorite"/>
+   </typeAliases>
+   
+   <environments default="development">
+      <environment id="development">
+         <transactionManager type="JDBC"/>
+         <dataSource type="JNDI">
+            <property name="data_source" value="java:comp/env/jdbc/oracle"/>
+         </dataSource>
+      </environment>      
+   </environments>
+   
+   <mappers>
+      <mapper resource="favorite/mapper/Favorite.xml"/>
+   </mappers>
+   
+</configuration>
+>>>>>>> b1dfbe2292ba78a93a60eb3ee8638e93600c00a5
