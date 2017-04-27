@@ -5,10 +5,14 @@
 
 <configuration>
 	<typeAliases>
+<<<<<<< HEAD
 		<typeAlias type="customer.model.C_Board" alias="C_Board"/>
 		<typeAlias type="customer.model.Search" alias="Search"/>
 		<typeAlias type="customer.model.Answer" alias="Answer"/>
 		
+=======
+
+>>>>>>> 031ecb4dca0db1817cb005ebbcde1a7252d3e522
 	</typeAliases>
 	
 	<environments default="development">
@@ -21,7 +25,11 @@
 	</environments>
 	
 	<mappers>
+<<<<<<< HEAD
 		<mapper resource="customer/mapper/Board.xml"/>
+=======
+		<mapper resource="Category/mapper/Category.xml" />
+>>>>>>> 031ecb4dca0db1817cb005ebbcde1a7252d3e522
 	</mappers>
 	
 </configuration>

@@ -1,4 +1,8 @@
 eclipse.preferences.version=1
+<<<<<<< HEAD
 encoding//WebContent/remocon/remocon.css=UTF-8
 encoding//WebContent/trash/main_v3.css=UTF-8
 encoding//src/customer/model/C_BoardDAO.java=UTF-8
+=======
+encoding//WebContent/shopMain/shopBody.jsp=UTF-8
+>>>>>>> 031ecb4dca0db1817cb005ebbcde1a7252d3e522
