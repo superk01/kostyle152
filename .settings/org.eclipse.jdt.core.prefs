@@ -2,6 +2,7 @@ eclipse.preferences.version=1
 org.eclipse.jdt.core.compiler.codegen.inlineJsrBytecode=enabled
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 org.eclipse.jdt.core.compiler.codegen.methodParameters=do not generate
 org.eclipse.jdt.core.compiler.codegen.targetPlatform=1.8
 org.eclipse.jdt.core.compiler.codegen.unusedLocal=preserve
@@ -17,6 +18,10 @@ org.eclipse.jdt.core.compiler.compliance=1.8
 org.eclipse.jdt.core.compiler.codegen.targetPlatform=1.8
 org.eclipse.jdt.core.compiler.compliance=1.8
 >>>>>>> 35188bd0764fcc7b320a92d2ddee3cf6435ea85c
+=======
+org.eclipse.jdt.core.compiler.codegen.targetPlatform=1.8
+org.eclipse.jdt.core.compiler.compliance=1.8
+>>>>>>> 3a949a197645aa125de08e72cecfa02ed41b8e31
 org.eclipse.jdt.core.compiler.problem.assertIdentifier=error
 org.eclipse.jdt.core.compiler.problem.enumIdentifier=error
 org.eclipse.jdt.core.compiler.source=1.8
