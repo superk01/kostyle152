@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <wb-module deploy-name="Kostyle">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
@@ -20,5 +21,12 @@
         <property name="context-root" value="Kosta"/>
         <property name="java-output-path" value="/Kosta/build/classes"/>
 >>>>>>> 3a949a197645aa125de08e72cecfa02ed41b8e31
+=======
+    <wb-module deploy-name="Kostylemall">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <property name="context-root" value="Kostylemall"/>
+        <property name="java-output-path" value="/Kostylemall/build/classes"/>
+>>>>>>> 62eeeb7de3131d04c7ac2df03cae7c54e3e4f9f9
     </wb-module>
 </project-modules>

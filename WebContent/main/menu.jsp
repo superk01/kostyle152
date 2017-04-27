@@ -26,9 +26,12 @@
 	<ul>
 		<li><a href ="template.jsp?body=main.jsp">메인</a></li>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 		<li><a href ="template.jsp?body=../stats/hitcountindex.jsp">검색</a></li>
 >>>>>>> 35188bd0764fcc7b320a92d2ddee3cf6435ea85c
+=======
+>>>>>>> 62eeeb7de3131d04c7ac2df03cae7c54e3e4f9f9
 
 	</ul>
 </div>

@@ -12,6 +12,7 @@
 </head>
 <body>
 	<div>
+<<<<<<< HEAD
 		<div id="TotalCategoryResult_Box">
 			<c:forEach var="product" items="${product_list}">
 				<div class="CategoryResult_oneItemBox">
@@ -21,6 +22,19 @@
 				</div>
 			</c:forEach>
 		</div>
+=======
+	
+		<div id="TotalCategoryResult_Box">
+			<c:forEach var="product" items="${product_list}">
+				<div class="CategoryResult_oneItemBox">
+					<div class="CategoryResult_oneItemBox_child_Img"><a href="http://${product.product_link}" class="countShoppingmall"><img src="http://${product.product_ImageLink}" class="CategoryResultImgSize"></a></div>
+					<div class="CategoryResult_oneItemBox_child_Name"><a href="http://${product.product_link}" class="countShoppingmall">${product.product_name}</a></div>
+					<div class="CategoryResult_oneItemBox_child_price"><a href="http://${product.product_link}" class="countShoppingmall">${product.product_price}</a></div>
+				</div>
+			</c:forEach>
+		</div>
+	
+>>>>>>> 62eeeb7de3131d04c7ac2df03cae7c54e3e4f9f9
 	</div>
 </body>
 </html>

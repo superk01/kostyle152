@@ -11,8 +11,13 @@ A:hover{
 #TotalCategoryResult_Box{
 	width: 1000px;
 	height: 250px;
+<<<<<<< HEAD
 	margin-left: 10%;
 	margin-right: 10%;
+=======
+	margin-left: 11%;
+	margin-right: 11%;
+>>>>>>> 62eeeb7de3131d04c7ac2df03cae7c54e3e4f9f9
 	margin-top: 5%;
 	text-align: center;
 	font-size: 12px;
@@ -29,4 +34,13 @@ A:hover{
 	width: 200px;
 	height : 250px;
 	padding-bottom:10px;
+<<<<<<< HEAD
+=======
+}
+
+.CategoryResult_oneItemBox_child_Name{
+	width: 200px;
+	height : 15px;
+	overflow: hidden;
+>>>>>>> 62eeeb7de3131d04c7ac2df03cae7c54e3e4f9f9
 }
