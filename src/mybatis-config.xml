@@ -6,6 +6,7 @@
 <configuration>
 	<typeAliases>
 <<<<<<< HEAD
+<<<<<<< HEAD
 		<typeAlias type="customer.model.C_Board" alias="C_Board"/>
 		<typeAlias type="customer.model.Search" alias="Search"/>
 		<typeAlias type="customer.model.Answer" alias="Answer"/>
@@ -13,6 +14,10 @@
 =======
 
 >>>>>>> 031ecb4dca0db1817cb005ebbcde1a7252d3e522
+=======
+		<typeAlias type="stats.model.HitCount" alias="HitCount"/>
+		<typeAlias type="stats.model.ShoppingMall" alias="ShoppingMall"/>
+>>>>>>> 35188bd0764fcc7b320a92d2ddee3cf6435ea85c
 	</typeAliases>
 	
 	<environments default="development">
@@ -26,10 +31,14 @@
 	
 	<mappers>
 <<<<<<< HEAD
+<<<<<<< HEAD
 		<mapper resource="customer/mapper/Board.xml"/>
 =======
 		<mapper resource="Category/mapper/Category.xml" />
 >>>>>>> 031ecb4dca0db1817cb005ebbcde1a7252d3e522
+=======
+		<mapper resource="stats/mapper/Stats.xml"/>
+>>>>>>> 35188bd0764fcc7b320a92d2ddee3cf6435ea85c
 	</mappers>
 	
 </configuration>

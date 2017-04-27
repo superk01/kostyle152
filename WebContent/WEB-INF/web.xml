@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <!--
   Licensed to the Apache Software Foundation (ASF) under one or more
   contributor license agreements.  See the NOTICE file distributed with
@@ -4094,9 +4095,19 @@
     <extension>zmm</extension>
     <mime-type>application/vnd.handheld-entertainment+xml</mime-type>
   </mime-mapping>
+=======
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>kostylemall</display-name>
+>>>>>>> 35188bd0764fcc7b320a92d2ddee3cf6435ea85c
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>index.htm</welcome-file>
     <welcome-file>index.jsp</welcome-file>
+<<<<<<< HEAD
+=======
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+>>>>>>> 35188bd0764fcc7b320a92d2ddee3cf6435ea85c
   </welcome-file-list>
 </web-app>
