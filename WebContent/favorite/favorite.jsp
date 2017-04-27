@@ -16,9 +16,10 @@
 	}
 	int requestPage = Integer.parseInt(pageNum);
 
-	FavoriteService service = FavoriteService.getInstance();
-	ListModel listModel = service.listFavoriteService(request, requestPage);
+	FavoriteService service1 = FavoriteService.getInstance();
+	ListModel listModel = service1.listFavoriteService(request, requestPage);
 	request.setAttribute("listModel", listModel);
+	
 %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -31,30 +32,37 @@
 <body>
 	
 	<h1><img src="../resources/images/favoriteImg/032-star.png" alt= "쇼핑몰 즐겨찾기페이지" >&nbsp;즐겨찾기</h1>
-	
+	<br>
+	<br>
+	<form action="favorit.jsp?f_num=${favorite.f_num }">
 	 <table id="favoriteTb">
 		<tr>
-			<th><input type="checkbox" name="area"></input>
 			<th>이미지</th>
 			<th>쇼핑몰이름</th>
 			<th>코멘트</th>
 			<th>홈</th>
+			<th>삭제</th>
 		</tr>
 		
 		<c:forEach var="Favorite" items="${listModel.list}">
 			<tr>
-			 	<td><input type="checkbox" name="area"></td>
 				<td><img src="">${Favorite.s_image}</td>
 				<td><a href="#">${Favorite.s_sname }</a></td>
-				<td><textarea name="name"><c:out value="${Favorite.f_coment}" /></textarea></td>
-				<td><a href="#"><img src="">${Favorite.s_shopurl }</a></td>
+				<td><a id="comentlink" href="detail.jsp?f_num=${Favorite.f_num}"><img src="../resources/images/favoriteImg/coment.png"></a></td>
+				<td><a id="shoplink" href="http://${Favorite.s_shopurl }">
+					<img src="../resources/images/favoriteImg/home2.png" onmouseover='this.src="../resources/images/favoriteImg/home1.png"' onmouseout='this.src="../resources/images/favoriteImg/home2.png"'>
+					</a></td>
+				<td><a id="deleteRow" href="deleteAction.jsp?f_num=${Favorite.f_num}"><img src="../resources/images/favoriteImg/del.png"></a></td>
 			</tr>
 		</c:forEach>
 	</table>
 	
 	<br>
-	<br>
+
+	</form>
 	
+	<br>
+	<br> 
 	<section>
 	<!-- 이전 -->
 	<c:if test="${listModel.startPage > 5 }">

@@ -39,7 +39,7 @@ private static FavoriteDao dao = new FavoriteDao();
 			SqlSession sqlSession = getsqlSessionFactory().openSession();
 			List<Favorite> list = null;
 			try {
-				list = sqlSession.getMapper(FavoriteMapper.class).listFavorite(new RowBounds(startRow, 5));
+				list = sqlSession.getMapper(FavoriteMapper.class).listFavorite(new RowBounds(startRow, 7));
 			} catch (Exception e) {
 				e.printStackTrace();
 			}finally {
@@ -49,7 +49,7 @@ private static FavoriteDao dao = new FavoriteDao();
 		}
 	
 		
-	//CountBoard(총 게시글의 수 출력)
+	//CountFavorite(총 게시글의 수 출력)
 		public int countFavorite(){
 			SqlSession sqlSession = getsqlSessionFactory().openSession();
 			int re=0;
@@ -62,9 +62,66 @@ private static FavoriteDao dao = new FavoriteDao();
 			}
 			return re;
 		}	
+		
+	//detailComent
+		public Favorite detailComent(String f_num){
+			SqlSession sqlSession = getsqlSessionFactory().openSession();
+			Favorite favorite = null;
+			try{
+				favorite = sqlSession.getMapper(FavoriteMapper.class).detailComent(f_num);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}finally {
+				sqlSession.close();
+			}
+			return favorite;
+		}
+		
+		
+	//updateComent(favorite에서 해당 글의 코멘트 버튼을 클릭하면 updateForm에서 코멘트 입력/수정이 가능)
+		public int updateComent(Favorite favorite){
+			SqlSession sqlSession = getsqlSessionFactory().openSession();
+			int re=-1;
+			try {
+				re = sqlSession.getMapper(FavoriteMapper.class).updateComent(favorite);
+				if(re>0){
+					sqlSession.commit();
+				}else{
+					sqlSession.rollback();
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			}finally {
+				sqlSession.close();
+			}
+			return re;
+		}
+		
+		
+	//deleteFavorite(favorite에서 해당 글의 삭제 버튼을 클릭하면 DB에서 삭제됨)
+		public int deleteFavorite(Favorite favorite){
+			SqlSession sqlSession = getsqlSessionFactory().openSession();
+			int re=-1;
+			try {
+				re = sqlSession.getMapper(FavoriteMapper.class).deleteFavorite(favorite);
+				if(re>0){
+					sqlSession.commit();
+				}else{
+					sqlSession.rollback();
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			}finally {
+				sqlSession.close();
+			}
+			return re;
+		}
+		
+		
 	
 	
-	
+		
+		
 	
 	
 }

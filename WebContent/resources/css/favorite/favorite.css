@@ -16,7 +16,7 @@ h1{
 
 
 h1 img{
-	width: 35px;
+	width: 40px;
 }
 
 
@@ -27,35 +27,46 @@ h1 img{
 }
 
 
+
 #favoriteTb th:nth-child(1){
-	width: 60px;
+	width: 120px;
 }
 
 
 #favoriteTb th:nth-child(2){
-	width: 110px;
+	width: 500px;
 }
 
 
 #favoriteTb th:nth-child(3){
-	width: 380px;
+	width: 120px;
 }
 
 
 #favoriteTb th:nth-child(4){
-	width: 480px;
+	width: 120px;
 }
 
-
 #favoriteTb th:nth-child(5){
-	width: 110px;
+	width: 120px;
 }
 
 
 #favoriteTb td{
-	height: 120px;
+	height: 80px;
 }
 
+#shoplink img{
+	width: 50px;
+}
+
+#comentlink img{
+	width: 50px;
+}
+
+#deleteRow img{
+	width: 50px;
+}
 
 textarea{
 	width: 500px;
@@ -70,16 +81,17 @@ th{
 	background-color: gray;
 }
 
-tr:HOVER{
-	background-color: #f2f2f2;
-}
-
 
 td{
 	border-bottom: solid 1px;
-	text-align: center;
+}
+
+td a{
+	text-decoration: none;
+	color: black;
 	font-family: 맑은 고딕;
-	font-size: 20px;
+	text-align: center;
+	font-size: 23px
 }
 
 
@@ -100,6 +112,5 @@ section{
 	background-repeat: no-repeat;
 	background-position: center;	
 }
-
 
 

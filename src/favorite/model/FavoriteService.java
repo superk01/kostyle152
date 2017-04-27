@@ -8,7 +8,7 @@ public class FavoriteService {
 
 	private static FavoriteService service = new FavoriteService();
 	private static FavoriteDao dao;
-	private static int page_size = 5;
+	private static int page_size = 7;
 
 	public static FavoriteService getInstance(){
 		dao = FavoriteDao.getInstance();
@@ -37,6 +37,22 @@ public class FavoriteService {
 			return new ListModel(list, requestPage, totalPageCount, startPage, endPage);
 		}
 		
+	//detailComent
+		public Favorite detailComentService(String f_num){
+			return dao.detailComent(f_num);
+		}
+	
+	//updateComent
+		public int updateComentService(Favorite favorite){
+			return dao.updateComent(favorite);
+		}
 		
+		
+	//deleteFavorite
+		public int deleteFavoriteService(Favorite favorite){
+			return dao.deleteFavorite(favorite);
+		}
+		
+	
 	
 }
