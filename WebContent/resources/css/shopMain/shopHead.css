@@ -1,0 +1,24 @@
+@CHARSET "UTF-8";
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> b1dfbe2292ba78a93a60eb3ee8638e93600c00a5
+#loginimg{
+	width: 30px;
+	position: absolute;
+	top: 30px;
+	right: 30px;
+}
+
+
+#logo{
+	display:block;
+<<<<<<< HEAD
+	width: 500px;
+=======
+	width: 600px;
+>>>>>>> b1dfbe2292ba78a93a60eb3ee8638e93600c00a5
+	margin:0 auto; 
+	
+}
