@@ -76,6 +76,8 @@ function fn_delete(){
 				<input type="submit" value="´ñ±Û´Þ±â" >
 				</form>
 				</td>
+				
+				
 	</table>
 
 </table>
